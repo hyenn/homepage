@@ -128,7 +128,12 @@
 	<td><%=dto.getNo() %></td>
 	<td>
 	<a href="javascript:read('<%=dto.getNo()%>')">
-	<%=dto.getTitle() %></a></td>
+	<%=dto.getTitle() %></a>
+	<%
+	if(Utility.compareDay(dto.getMdate()))
+		out.print("<img src='../images/new.png' style='width:25px; height:35px'>");
+	%>
+	</td>
  	<td><%=dto.getName() %></td>
  	<td><%=dto.getMdate() %></td>
  	<td><%=dto.getViewcnt() %></td>
